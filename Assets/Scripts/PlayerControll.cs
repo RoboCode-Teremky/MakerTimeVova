@@ -26,8 +26,8 @@ public class PlayerControll : MonoBehaviour
     }
     void Start()
     {
-        PlayerInput.PlayerControll.Movement.started += ChangeDirection;
-        PlayerInput.PlayerControll.Movement.canceled += ChangeDirection;
+        playerInput.InGame.Movement.started += ChangeDirection;
+        playerInput.InGame.Movement.canceled += ChangeDirection;
     }
 
     void Update()
