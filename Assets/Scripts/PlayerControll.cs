@@ -32,12 +32,12 @@ public class PlayerControll : MonoBehaviour
 
     void Update()
     {
-        relativePosition = Mathf.Clamp(relativePosition += sensitivity*relativeDirection*Time.deltaTime, 0.0f, 1.0f);
+        relativePosition = Mathf.Clamp(relativePosition + sensitivity*relativeDirection*Time.deltaTime, 0.0f, 1.0f);
         transform.position = Vector3.Lerp(leftEdge.position, rightEdge.position, relativePosition);
     }
 
     private void ChangeDirection(InputAction.CallbackContext context){
         relativeDirection = context.ReadValue<Vector2>().x;
-
+        //Debug.Log(relativeDirection);
     }
 }
