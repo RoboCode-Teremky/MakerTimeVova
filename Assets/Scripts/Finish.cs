@@ -10,6 +10,7 @@ public class Finish : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player")){
             finishReached.Invoke();
+            Time.timeScale = 0f;
         }
     }
 }
