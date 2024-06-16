@@ -9,13 +9,13 @@ public class Score : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ScoreText.text = ScoreCounter.currentScore;
+        
         //if(ScoreCounter.AddBonus(ScoreText));
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        ScoreText.text = ScoreCounter.currentScore.ToString();
     }
 }
