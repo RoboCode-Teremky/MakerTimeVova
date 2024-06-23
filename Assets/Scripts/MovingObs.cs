@@ -17,6 +17,6 @@ public class MovingObs : Bonus
     void Update()
     {
         transform.position = Vector3.Lerp(leftEdge.position, rightEdge.position, Mathf.Sin(speed*Time.timeSinceLevelLoad+phase)/2.0f+0.5f);
-        transform.rotation = Quaternion.Euler(0.0f,speed*Time.timeSinceLevelLoad,0.0f);
+        //transform.rotation = Quaternion.Euler(0.0f,speed*Time.timeSinceLevelLoad,0.0f);
     }
 }
